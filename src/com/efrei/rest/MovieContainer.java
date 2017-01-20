@@ -1,6 +1,7 @@
 package com.efrei.rest;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -29,6 +30,9 @@ public class MovieContainer {
         matrix.setId(1);
         matrix.setName("Matrix");
         matrix.setDirector(DirectorContainer.getInstance().get(1));
+        ActorList actorList = new ActorList();
+        actorList.setActorMovie(new ArrayList<>(Arrays.asList(ActorContainer.getInstance().get(1), ActorContainer.getInstance().get(2))));
+        matrix.setActors(actorList);
         matrix.setSynopsis("The Matrix is a 1999 science fiction film written and directed by The Wachowskis, starring" +
                 " Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving, and Joe Pantoliano. It depicts a " +
                 "dystopian future in which reality as perceived by most humans is actually a simulated reality called " +
@@ -45,6 +49,7 @@ public class MovieContainer {
         matrix2.setId(2);
         matrix2.setName("Matrix");
         matrix2.setDirector(DirectorContainer.getInstance().get(1));
+        matrix2.setActors(actorList);
         matrix2.setSynopsis("The Matrix is a 1999 science fiction film written and directed by The Wachowskis, starring" +
                 " Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving, and Joe Pantoliano. It depicts a " +
                 "dystopian future in which reality as perceived by most humans is actually a simulated reality called " +

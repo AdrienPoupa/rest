@@ -1,6 +1,7 @@
 package com.efrei.rest;
 
 import javax.xml.bind.annotation.XmlRootElement;
+import java.util.List;
 
 /**
  * A single movie
@@ -11,14 +12,16 @@ public class Movie {
     private String name;
     private String year; // store year as strings, less expensive
     private Director director;
+    private ActorList actors;
     private String synopsis;
     private boolean won;
 
-    public Movie(int id, String name, String year, Director director, String synopsis, boolean won) {
+    public Movie(int id, String name, String year, Director director, ActorList actors, String synopsis, boolean won) {
         this.id = id;
         this.name = name;
         this.year = year;
         this.director = director;
+        this.actors = actors;
         this.synopsis = synopsis;
         this.won = won;
     }
@@ -28,6 +31,7 @@ public class Movie {
         this.name = "";
         this.year = "2017";
         this.director = null;
+        this.actors = null;
         this.synopsis = "";
         this.won = false;
     }
@@ -78,5 +82,13 @@ public class Movie {
 
     public void setWon(boolean won) {
         this.won = won;
+    }
+
+    public ActorList getActors() {
+        return actors;
+    }
+
+    public void setActors(ActorList actors) {
+        this.actors = actors;
     }
 }

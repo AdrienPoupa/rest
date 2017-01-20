@@ -10,14 +10,26 @@ import java.util.List;
 import java.util.stream.Collectors;
 import static java.lang.Math.toIntExact;
 
+/**
+ * Director WebService
+ */
 @Path("/realisateurs/")
 public class DirectorService {
+    /**
+     * Show all directors
+     * @return
+     */
     @GET
     @Produces(MediaType.TEXT_XML)
     public List<Director> DirectorsList() {
         return new ArrayList<>(DirectorContainer.getInstance().values());
     }
 
+    /**
+     * Show a director based on his ID
+     * @param id
+     * @return
+     */
     @Path("{id}/")
     @GET
     @Produces(MediaType.TEXT_XML)
@@ -25,6 +37,11 @@ public class DirectorService {
         return DirectorContainer.getInstance().get(toIntExact(id));
     }
 
+    /**
+     * Show all the movies from a director
+     * @param directorId
+     * @return
+     */
     @Path("{id}/films/")
     @GET
     @Produces(MediaType.TEXT_XML)

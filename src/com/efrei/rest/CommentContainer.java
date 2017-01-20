@@ -33,4 +33,8 @@ public class CommentContainer {
 
         return commentList;
     }
+
+    public static void addComment(Comment comment) {
+        commentList.add(comment);
+    }
 }

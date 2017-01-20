@@ -1,24 +1,23 @@
 package com.efrei.rest;
 
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
- * Comments
+ * Grades
  */
 @XmlRootElement
-public class Comment {
+public class Grade {
     private int movie;
-    private String text;
+    private int mark;
 
-    public Comment(int movieId, String comment) {
+    public Grade(int movieId, int mark) {
         this.movie = movieId;
-        this.text = comment;
+        this.mark = mark;
     }
 
-    public Comment() {
+    public Grade() {
         this.movie = -1;
-        this.text = "";
+        this.mark = 0;
     }
 
     //@XmlTransient
@@ -30,11 +29,11 @@ public class Comment {
         this.movie = movie;
     }
 
-    public String getText() {
-        return text;
+    public int getMark() {
+        return mark;
     }
 
-    public void setText(String text) {
-        this.text = text;
+    public void setMark(int mark) {
+        this.mark = mark;
     }
 }

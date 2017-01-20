@@ -5,8 +5,15 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+/**
+ * Laureats WebService
+ */
 @Path("/laureats/")
 public class LaureatsService {
+    /**
+     * Show all winners by year
+     * @return
+     */
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String moviesList() {

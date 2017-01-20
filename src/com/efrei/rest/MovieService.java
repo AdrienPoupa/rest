@@ -8,14 +8,26 @@ import javax.ws.rs.core.MediaType;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Movie WebService
+ */
 @Path("/films/")
 public class MovieService {
+    /**
+     * Display all movies
+     * @return
+     */
     @GET
     @Produces(MediaType.TEXT_XML)
     public List<Movie> moviesList() {
         return MovieContainer.getInstance();
     }
 
+    /**
+     * Display all movies released in a given year
+     * @param year year
+     * @return
+     */
     @Path("{year}/")
     @GET
     @Produces(MediaType.TEXT_XML)
@@ -27,6 +39,11 @@ public class MovieService {
                 .collect(Collectors.toList());
     }
 
+    /**
+     * Display the winner for a given year
+     * @param year year
+     * @return
+     */
     @Path("{year}/laureat/")
     @GET
     @Produces(MediaType.TEXT_XML)

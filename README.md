@@ -26,11 +26,31 @@ path examples: /realisateurs/1/films    /realisateurs/2/films
 path examples: /commentaires/1    /commentaires/2
 
 - Un service pour ajouter des commentaires à un film avec un formulaire HTML
+path example: POST /commentaires (XML)
 
-- Un service pour obtenir une ''text plain'' avec tous les lauréats (Année et nom du film par ligne.)
+- Un service pour obtenir une ''mark plain'' avec tous les lauréats (Année et nom du film par ligne.)
 path: /laureats
 
 - Utilisez votre imagination pour définir et créer 2 services Web supplémentaires pour le festival du film.
+
+- Service acteur:
+    - Liste des acteurs ajoutées à la vue d'un ou plusieurs films
+    - Liste des acteurs
+    path: /acteurs
+    - Liste d'un acteur
+    path: /acteurs/1
+    - Liste des films d'un acteur
+    path: /acteurs/1/films
+    
+- Services grade: notes des films
+    - Liste des notes pour un film
+    path: /notes/1
+    - Moyenne des notes pour un film
+    path: /notes/1/moyenne
+    - Envoi d'une note
+    path: POST /notes/1 (XML)
+
+Toutes les données sont stockées sous la forme d'un singleton.
 
 Envoyer: jabier.martinez.11000761@intervenants.groupe-efrei.fr
 - Un fichier ZIP avec le code source (projet Eclipse). Lorsque vous créez le Zip, vous pouvez supprimer les fichiers Jar de la distribution Jersey. \WebContent\WEB-INF\lib Cela réduira la taille et l'email ne sera pas bloqué par votre client de messagerie.
