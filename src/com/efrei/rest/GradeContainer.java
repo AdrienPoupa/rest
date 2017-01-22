@@ -25,11 +25,20 @@ public class GradeContainer {
     private static List<Grade> buildGradeList() {
         gradeList = new ArrayList<>();
 
-        Grade grade = new Grade(1, 70);
-        Grade grade2 = new Grade(1, 80);
+        gradeList.add(new Grade(1, 70));
+        gradeList.add(new Grade(1, 80));
 
-        gradeList.add(grade);
-        gradeList.add(grade2);
+        gradeList.add(new Grade(2, 75));
+        gradeList.add(new Grade(2, 88));
+
+        gradeList.add(new Grade(3, 74));
+        gradeList.add(new Grade(3, 88));
+
+        gradeList.add(new Grade(4, 72));
+        gradeList.add(new Grade(4, 87));
+
+        gradeList.add(new Grade(5, 55));
+        gradeList.add(new Grade(5, 30));
 
         return gradeList;
     }

@@ -20,7 +20,7 @@ public class LaureatsService {
         StringBuilder list = new StringBuilder();
         for (Movie m : MovieContainer.getInstance()) {
             if (m.hasWon()) {
-                list.append(m.getYear()).append(" ").append(m.getName());
+                list.append(m.getYear()).append(" ").append(m.getName()).append(System.getProperty("line.separator"));
             }
         }
 

@@ -25,7 +25,7 @@ public class ActorService {
     }
 
     /**
-     * Display an actor basd on his ID
+     * Display an actor based on his ID
      * @param id
      * @return
      */
