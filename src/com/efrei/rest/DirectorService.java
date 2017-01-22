@@ -17,7 +17,7 @@ import static java.lang.Math.toIntExact;
 public class DirectorService {
     /**
      * Show all directors
-     * @return
+     * @return List<Director>
      */
     @GET
     @Produces(MediaType.TEXT_XML)
@@ -27,8 +27,8 @@ public class DirectorService {
 
     /**
      * Show a director based on his ID
-     * @param id
-     * @return
+     * @param id Long
+     * @return Director
      */
     @Path("{id}/")
     @GET
@@ -39,8 +39,8 @@ public class DirectorService {
 
     /**
      * Show all the movies from a director
-     * @param directorId
-     * @return
+     * @param directorId Long
+     * @return List<Movie>
      */
     @Path("{id}/films/")
     @GET

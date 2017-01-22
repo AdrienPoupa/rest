@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 public class MovieService {
     /**
      * Display all movies
-     * @return
+     * @return List<Movie>
      */
     @GET
     @Produces(MediaType.TEXT_XML)
@@ -25,8 +25,8 @@ public class MovieService {
 
     /**
      * Display all movies released in a given year
-     * @param year year
-     * @return
+     * @param year Year
+     * @return List<Movie>
      */
     @Path("{year}/")
     @GET
@@ -41,8 +41,8 @@ public class MovieService {
 
     /**
      * Display the winner for a given year
-     * @param year year
-     * @return
+     * @param year Year
+     * @return List<Movie>
      */
     @Path("{year}/laureat/")
     @GET

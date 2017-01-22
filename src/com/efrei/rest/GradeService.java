@@ -14,8 +14,8 @@ import static java.lang.Math.toIntExact;
 public class GradeService {
     /**
      * Display all grades of a movie
-     * @param movieId
-     * @return
+     * @param movieId Long
+     * @return List<Grade>
      */
     @Path("{id}/")
     @GET
@@ -30,8 +30,8 @@ public class GradeService {
 
     /**
      * Display the average of all grades for a movie
-     * @param movieId
-     * @return
+     * @param movieId Long
+     * @return Double
      */
     @Path("{id}/moyenne")
     @GET
@@ -48,16 +48,16 @@ public class GradeService {
 
     /**
      * Post a new grade
-     * @param Grade
-     * @return
+     * @param grade Grade
+     * @return Response
      */
     @POST
     @Consumes(MediaType.TEXT_XML)
-    public Response addGrade(Grade Grade) {
+    public Response addGrade(Grade grade) {
         GradeContainer.getInstance();
-        GradeContainer.addGrade(Grade);
+        GradeContainer.addGrade(grade);
 
-        String result = "Grade saved : " + Grade;
+        String result = "Grade saved : " + grade;
         return Response.status(201).entity(result).build();
     }
 }
