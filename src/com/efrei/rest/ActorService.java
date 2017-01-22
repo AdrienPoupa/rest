@@ -16,7 +16,7 @@ import static java.lang.Math.toIntExact;
 public class ActorService {
     /**
      * Display all actors
-     * @return
+     * @return List<Actor>
      */
     @GET
     @Produces(MediaType.TEXT_XML)
@@ -26,8 +26,8 @@ public class ActorService {
 
     /**
      * Display an actor basd on his ID
-     * @param id
-     * @return
+     * @param id Long
+     * @return Actor
      */
     @Path("{id}/")
     @GET
@@ -38,8 +38,8 @@ public class ActorService {
 
     /**
      * Display the movies of an actor
-     * @param actorId
-     * @return
+     * @param actorId Long
+     * @return List<Movie>
      */
     @Path("{id}/films/")
     @GET

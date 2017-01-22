@@ -11,8 +11,8 @@ import static java.lang.Math.toIntExact;
 public class CommentService {
     /**
      * Display all comments for a movie ID
-     * @param movieId
-     * @return
+     * @param movieId Long
+     * @return List<Comment>
      */
     @Path("{id}/")
     @GET
@@ -27,8 +27,8 @@ public class CommentService {
 
     /**
      * Post a new comment
-     * @param comment comment object from XML file in POST
-     * @return confirmation message
+     * @param comment Comment object from XML file in POST
+     * @return Response confirmation message
      */
     @POST
     @Consumes(MediaType.TEXT_XML)

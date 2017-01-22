@@ -12,7 +12,7 @@ import javax.ws.rs.core.MediaType;
 public class LaureatsService {
     /**
      * Show all winners by year
-     * @return
+     * @return String
      */
     @GET
     @Produces(MediaType.TEXT_PLAIN)
