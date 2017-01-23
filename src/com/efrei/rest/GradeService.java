@@ -1,8 +1,11 @@
 package com.efrei.rest;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.*;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 import static java.lang.Math.toIntExact;
@@ -59,5 +62,27 @@ public class GradeService {
 
         String result = "Grade saved : " + grade;
         return Response.status(201).entity(result).build();
+    }
+
+    /**
+     * Post a new grade using a HTML form
+     * @param movieId movie ID
+     * @param mark mark
+     * @param servletResponse servlet response
+     * @throws IOException
+     */
+    @POST
+    @Produces(MediaType.TEXT_HTML)
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    public void newTodo(@FormParam("movieId") String movieId,
+                        @FormParam("mark") String mark,
+                        @Context HttpServletResponse servletResponse) throws IOException {
+
+        Grade grade = new Grade(Integer.parseInt(movieId), Integer.parseInt(mark));
+
+        GradeContainer.getInstance();
+        GradeContainer.addGrade(grade);
+
+        servletResponse.sendRedirect("../note.html");
     }
 }
