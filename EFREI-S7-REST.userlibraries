@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="Jersey-2.2">
+    <archive path="C:/Users/FABIEN/Documents/EFREI/M1/XML/EFREI-S7-REST/lib/jersey-container-servlet.jar" />
+    <archive path="C:/Users/FABIEN/Documents/EFREI/M1/XML/EFREI-S7-REST/lib/javax.ws.rs-api-2.0.jar" />
+    <archive path="C:/Users/FABIEN/Documents/EFREI/M1/XML/EFREI-S7-REST/lib/jersey-client.jar" />
+    <archive path="C:/Users/FABIEN/Documents/EFREI/M1/XML/EFREI-S7-REST/lib/jersey-container-servlet-core.jar" />
+    <archive path="C:/Users/FABIEN/Documents/EFREI/M1/XML/EFREI-S7-REST/lib/jersey-common.jar" />
+    <archive path="C:/Users/FABIEN/Documents/EFREI/M1/XML/EFREI-S7-REST/lib/jersey-server.jar" />
+  </library>
+</eclipse-userlibraries>
+
