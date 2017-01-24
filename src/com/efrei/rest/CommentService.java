@@ -53,7 +53,7 @@ public class CommentService {
     @POST
     @Produces(MediaType.TEXT_HTML)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public void newTodo(@FormParam("movieId") String movieId,
+    public void addCommentForm(@FormParam("movieId") String movieId,
                         @FormParam("commentText") String comentText,
                         @Context HttpServletResponse servletResponse) throws IOException {
 

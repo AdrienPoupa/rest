@@ -74,7 +74,7 @@ public class GradeService {
     @POST
     @Produces(MediaType.TEXT_HTML)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public void newTodo(@FormParam("movieId") String movieId,
+    public void addGradeForm(@FormParam("movieId") String movieId,
                         @FormParam("mark") String mark,
                         @Context HttpServletResponse servletResponse) throws IOException {
 

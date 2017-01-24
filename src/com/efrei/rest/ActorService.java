@@ -26,8 +26,8 @@ public class ActorService {
 
     /**
      * Display an actor based on his ID
-     * @param id
-     * @return
+     * @param id Long
+     * @return Actor
      */
     @Path("{id}/")
     @GET
