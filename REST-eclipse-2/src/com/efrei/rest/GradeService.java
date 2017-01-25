@@ -83,6 +83,6 @@ public class GradeService {
         GradeContainer.getInstance();
         GradeContainer.addGrade(grade);
 
-        servletResponse.sendRedirect("../note.html");
+        servletResponse.sendRedirect("../note.jsp");
     }
 }

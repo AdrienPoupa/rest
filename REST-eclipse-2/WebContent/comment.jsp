@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Add a grade</title>
+    <title>Add a comment</title>
 </head>
 <body>
-<form action="./REST/index.jsp" method="POST">
+<form action="REST/commentaires" method="POST">
     <label for="movieId">Movie ID</label>
     <input id="movieId" name="movieId" required />
     <br/>
-    <label for="mark">Mark</label>
-    <input id="mark" name="mark" size="3" required /> /100
+    Comment:
+    <textarea name="commentText" cols="40" rows="6" required></textarea>
     <br/>
     <input type="submit" value="Submit" />
 </form>

@@ -5,7 +5,7 @@
     <title>Add a grade</title>
 </head>
 <body>
-<form action="./REST/index.jsp" method="POST">
+<form action="REST/notes" method="POST">
     <label for="movieId">Movie ID</label>
     <input id="movieId" name="movieId" required />
     <br/>

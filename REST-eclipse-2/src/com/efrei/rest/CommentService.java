@@ -62,6 +62,6 @@ public class CommentService {
         CommentContainer.getInstance();
         CommentContainer.addComment(comment);
 
-        servletResponse.sendRedirect("../commentaire.html");
+        servletResponse.sendRedirect("../comment.jsp");
     }
 }
